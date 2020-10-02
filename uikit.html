@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.8/css/uikit-core.min.css" integrity="sha512-bvDaZBEDtHDwGZbo0lJ/mLVfK0yZxySg0v7N3cvhBSxbl12HIYtjej7Q2fy1k4uMuC1UeGXShAHImgAxKaimsw==" crossorigin="anonymous" />
+		<script src="https://unpkg.com/htmx.org"></script>
+		<script src="https://unpkg.com/hyperscript.org"></script>
+	</head>
+	<body>
+
+		<div class="uk-container">
+			<h1>UIKit Modals..</h1>
+			<p>This is an example of using HTMX to remotely load modal dialogs using UIKit.  We're replacing the standard UIKit Javascript library with a little bit of Hyperscript, which triggers UIKit's smooth animations.</p>
+			<button hx-get="uikit-modal.html" hx-target="#show-modals-here" class="uk-button uk-button-primary" _="on htmx:afterOnLoad wait 10ms then add .uk-open to #modal">Open Modal</button>
+		</div>
+
+		<div id="show-modals-here"></div>
+	</body>
+</html>

@@ -1,31 +1,8 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://unpkg.com/htmx.org@0.0.8"></script>
-		<script>
-			function closeModal() {
-				var container = document.getElementById("modals-here")
-				var backdrop = document.getElementById("modal-backdrop")
-				var modal = document.getElementById("modal")
-
-				modal.classList.remove("show")
-				backdrop.classList.remove("show")
-
-				setTimeout(function() {
-					container.removeChild(backdrop)
-					container.removeChild(modal)
-				}, 200)
-			}
-		</script>
-	</head>
 	<body>
-
-		<div class="container">
-			<h1>Twitter Bootstrap Modals..</h1>
-			<p>This is an example of using HTMX to remotely load modal dialogs using Twitter Bootstrap.</p>
-			<button hx-get="modal.html" hx-target="#modals-here" class="btn btn-primary">Click Me To Crash the Mode</button>
-		</div>
-
-		<div id="modals-here"></div>
+		<ul>
+			<li><a href="bootstrap.html">Modals using Twitter Bootstrap</a></li>
+			<li><a href="uikit.html">Modals using UIKit</a></li>
+		</ul>
 	</body>
 </html>
